@@ -15,19 +15,19 @@ public class Randomizer {
 		List<String> aggList = new ArrayList<>();
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))){
-	        String currLine;
+			String currLine;
 
-	        while ((currLine = br.readLine()) != null) {     
-	        	aggList.add(currLine);
-	        }
+			while ((currLine = br.readLine()) != null) {     
+				aggList.add(currLine);
+			}
 
 		} catch (FileNotFoundException e) {
-	        e.printStackTrace();	        
-	    } catch (IOException e) {
-	    	e.printStackTrace();
-	    }
+			e.printStackTrace();	        
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-	    return aggList;
+		return aggList;
 	}
 
 	// Randomly assigns each owner to a list of competitors
@@ -53,9 +53,9 @@ public class Randomizer {
 			// Add remainder competitors for lucky team owners
 			if (i < remainderSize) {
 				partition.add(competitorsList.get(numOfCompetitors - 1 - i));
-		    }
+			}
 
-		    randomizedMap.put(ownersList.get(i), partition);
+			randomizedMap.put(ownersList.get(i), partition);
 		}
 
 		return randomizedMap;
