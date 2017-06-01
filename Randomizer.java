@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-public class RandomizePicks {
+public class Randomizer {
 	private static final String TEAMOWNERS = "owners.txt";
 
 	// Reads input file
